@@ -1,0 +1,95 @@
+/* ===================================================
+   LAB 8.2: RESPONSIVE WEB DESIGN (MEDIA QUERIES)
+   =================================================== */
+
+@media screen and (max-width: 768px) {
+  /* 1.RESPONSIVE CHO BANNER TRÊN MOBILE */
+  .banner p {
+    font-size: 32px;
+  }
+  .banner h1 {
+    font-size: 38px;
+    letter-spacing: 2px;
+  }
+  .banner button {
+    font-size: 20px;
+  }
+
+  /* 2. FEATURES TRÊN MOBILE */
+  .features {
+    grid-template-columns: 1fr;
+  }
+  .feature_item {
+    border: none;
+    padding: 30px 20px;
+  }
+
+  /* 3. RESPONSIVE CHO SECTION ABOUT TRÊN MOBILE */
+  .about {
+    grid-template-columns: 1fr;
+  }
+  .about_img {
+    height: auto;
+  }
+  .about_video_fb {
+    grid-column: auto;
+  }
+
+  /* 4. RESPONSIVE CHO SECTION PRODUCTS TRÊN MOBILE */
+  .products {
+    grid-template-columns: 1fr;
+    padding: 60px 20px;
+  }
+
+  .product_item {
+    height: auto;
+    width: 300px;
+    border: none;
+    border-bottom: 2px solid #5a8136;
+    padding-bottom: 5px;
+  }
+
+  .product_post_fb {
+    grid-column: auto;
+    width: 100%;
+    min-width: 0;
+    text-align: center;
+    margin: 60px auto 0;
+  }
+
+  .product_post_fb iframe {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  /* 5. RESPONSIVE CHO SECTION SERVICES */
+  .services {
+    padding: 60px 20px;
+  }
+
+  .service_list {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .service_list .service_item {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .service_list .service_item img {
+    height: 220px;
+  }
+
+  /* 6. RESPONSIVE CHO SECTION CONTACT */
+  .contact {
+    grid-template-columns: 1fr;
+    padding: 60px 20px;
+    gap: 40px;
+    text-align: center;
+  }
+}

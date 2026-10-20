@@ -1,0 +1,676 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Oswald:wght@400;700&family=Roboto+Condensed:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #222222;
+  background-color: #ffffff;
+}
+
+/* BANNER */
+.banner {
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
+  min-height: 100vh;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(./images/hinh_banner_about.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.banner .banner_content {
+  text-align: center;
+}
+
+.banner p {
+  font-family: "Caveat", cursive;
+  font-size: 50px;
+  color: #5a8136;
+  text-align: center;
+
+  animation: slideFromRight 3s ease-in-out;
+}
+
+@keyframes slideFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  50% {
+    transform: translateX(-100px);
+    opacity: 0.5;
+  }
+
+  75% {
+    transform: translateX(30px);
+    opacity: 0.75;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.banner h1 {
+  font-size: 60px;
+  font-family: Oswald, "sans-serif";
+  font-weight: 100;
+  letter-spacing: 5px;
+  color: white;
+  text-align: center;
+  padding-top: 0px;
+  text-transform: uppercase;
+
+  animation: slideFromLeft 3s ease-in-out;
+}
+
+@keyframes slideFromLeft {
+  0% {
+    transform: translateX(-100%); /* Bắt đầu ở bên trái */
+    opacity: 0;
+  }
+
+  50% {
+    transform: translateX(100px); /* Vượt qua giữa sang phải */
+    opacity: 0.5;
+  }
+
+  75% {
+    transform: translateX(-30px); /* Lùi nhẹ sang trái */
+    opacity: 0.75;
+  }
+
+  100% {
+    transform: translateX(0); /* Về vị trí ban đầu */
+    opacity: 1;
+  }
+}
+
+.banner button {
+  height: auto;
+  width: fit-content;
+
+  background-color: #5a8136;
+  color: #222222;
+  font-size: 30px;
+  font-family: Oswald, "sans-serif";
+  font-weight: 100;
+  letter-spacing: 5px;
+  line-height: 1.2;
+
+  outline: 2px solid #5a8136;
+  outline-offset: 5px;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  border: none;
+
+  cursor: pointer;
+  transition: all 0.3s;
+
+  animation: showButton 3s ease-in-out;
+}
+
+.banner button:hover {
+  transform: scale(120%);
+}
+
+@keyframes showButton {
+  0% {
+    transform: scale(0.5); /* Nhỏ bằng một nửa */
+    opacity: 0;
+  }
+
+  50% {
+    transform: scale(1.2); /* Phóng lớn hơn kích thước gốc */
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: scale(1); /* Trở về kích thước gốc */
+    opacity: 1;
+  }
+}
+/* END OF BANNER */
+
+/* FEATURE */
+.features {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.feature_item {
+  text-align: center;
+  border: 2px solid red;
+}
+.feature_item:hover {
+  background-color: #5a8136;
+}
+
+.feature_item h4 {
+  font-family: "Oswald", sans-serif;
+  font-size: 25px;
+  font-weight: 100;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+
+  color: #5a8136;
+}
+.feature_item:hover h4 {
+  color: #ffffff;
+}
+/* END OF FEATURE */
+
+/* ABOUT */
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+
+  min-height: 100vh;
+  max-width: 1100px;
+  margin: 0 auto; /* Căn giữa section */
+  padding: 20px 30px;
+}
+
+.about_img {
+  padding: 10px;
+  height: 600px;
+  background: #5a8136;
+  border-radius: 12px;
+  overflow: hidden; /* Giữ ảnh bên trong góc bo */
+}
+
+.about_img img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.about_content h3 {
+  font-family: "Caveat", cursive;
+  font-size: 50px;
+  color: #5a8136;
+  text-transform: capitalize;
+}
+
+.about_content h2 {
+  font-size: 60px;
+  font-family: Oswald, "sans-serif";
+  font-weight: 100;
+  letter-spacing: 5px;
+  padding-top: 0px;
+  text-transform: uppercase;
+}
+
+.about_content button {
+  height: auto;
+  width: fit-content;
+
+  background-color: #5a8136;
+  color: #ffffff;
+  font-size: 30px;
+  font-family: Oswald, "sans-serif";
+  font-weight: 100;
+  letter-spacing: 5px;
+  line-height: 1.2;
+
+  outline: 2px solid #5a8136;
+  outline-offset: 5px;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  border: none;
+
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.about_content button:hover {
+  transform: scale(120%);
+}
+
+/* END OF ABOUT */
+
+/* PRODUCTS */
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cột bằng nhau */
+  align-items: center;
+  justify-items: center;
+
+  margin: 0 auto;
+  padding: 80px 100px;
+
+  min-height: 100vh;
+  background-color: #222222;
+}
+
+.product_item {
+  height: 450px;
+  padding: 20px 0;
+  width: 350px;
+  border: 2px solid red;
+  border-bottom-color: #5a8136;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.product_content h3 {
+  font-family: "Caveat", cursive;
+  font-size: 40px;
+  color: #5a8136;
+  text-transform: capitalize;
+}
+
+.product_content h2 {
+  font-size: 40px;
+  font-family: Oswald, "sans-serif";
+  font-weight: 100;
+  letter-spacing: 5px;
+  padding-top: 0px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.product_content button {
+  margin-left: 7px;
+  margin-bottom: 9px;
+
+  height: auto;
+  width: fit-content;
+
+  background-color: #5a8136;
+  color: #ffffff;
+  font-size: 30px;
+  font-family: Oswald, "sans-serif";
+  font-weight: 100;
+  letter-spacing: 5px;
+  line-height: 1.2;
+
+  outline: 2px solid #5a8136;
+  outline-offset: 5px;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  border: none;
+
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.product_content button:hover {
+  transform: scale(90%);
+}
+
+.product_item img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+/* Tiêu đề của hai sản phẩm */
+.products > .product_item > h3 {
+  font-family: "Oswald", sans-serif;
+  font-size: 22px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: white;
+}
+
+/* Giá của hai sản phẩm */
+.products > .product_item > p {
+  font-family: "Caveat", cursive;
+  font-size: 40px;
+  color: #5a8136;
+}
+
+/* END OF PRODUCT */
+
+/* SERVICES */
+.services {
+  min-height: 100vh;
+  padding: 80px 100px;
+  background-color: #f1f5f8;
+}
+
+/* Tiêu đề chung */
+.services_title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.services_title p {
+  margin: 0;
+  font-family: "Caveat", cursive;
+  font-size: 40px;
+  letter-spacing: 3px;
+  color: #5a8136;
+  text-transform: capitalize;
+}
+
+.services_title h3 {
+  margin: 10px 0 0;
+  font-family: "Oswald", sans-serif;
+  font-size: 50px;
+  text-transform: uppercase;
+}
+
+/* Ba cột dịch vụ */
+.service_list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Khung dịch vụ */
+.service_item {
+  background-color: #5a8136;
+  border-radius: 30px;
+  overflow: hidden;
+  text-align: center;
+  padding-bottom: 30px;
+  outline: 5px solid #5a8136;
+  outline-offset: 7px;
+}
+
+.service_item img {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+/* Tên dịch vụ */
+.service_item p {
+  margin: 25px 15px;
+  font-family: "Oswald", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: capitalize;
+  color: white;
+}
+
+/* Nút Read more */
+.service_item button {
+  padding: 8px 16px;
+  border: none;
+  background-color: #5a8136;
+  color: #5a8136;
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  outline-color: #5a8136;
+
+  cursor: pointer;
+  transition:
+    color 0.3s,
+    outline-color 0.3s;
+}
+
+.service_item button:hover {
+  color: white;
+  outline-style: solid;
+  outline-width: 3px;
+  outline-color: white;
+}
+
+/* CONTACT */
+.contact {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+
+  padding: 80px 300px;
+  background-color: #f1f5f8;
+}
+
+/* Khoảng cách giữa các nhóm thông tin */
+.contact_info_item {
+  margin-bottom: 40px;
+}
+
+/* Bỏ khoảng cách dưới nhóm cuối */
+.contact_info_item:last-child {
+  margin-bottom: 0;
+}
+
+/* Address, Email, Telephone */
+.contact_info_item h3 {
+  margin: 0 0 10px;
+
+  font-family: "Caveat", cursive;
+  font-size: 32px;
+  letter-spacing: 3px;
+  color: #5a8136;
+}
+
+/* Nội dung liên hệ */
+.contact_info_item p {
+  margin: 0;
+
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 20px;
+  line-height: 1.6;
+  color: #222;
+}
+
+/* Khung form */
+.contact_form {
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.contact_form h3 {
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+
+  font-family: "Caveat", cursive;
+  font-size: 32px;
+  letter-spacing: 3px;
+  color: #456;
+}
+
+/* Xếp các ô nhập và nút thành một cột */
+.contact_form form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  padding-top: 30px;
+}
+
+/* Dùng chung cho các ô nhập */
+.contact_form input,
+.contact_form textarea {
+  margin: 0 15px;
+  padding: 12px;
+
+  border: none;
+  border-radius: 5px;
+  background-color: #f1f5f8;
+
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 16px;
+  letter-spacing: 3px;
+}
+
+.contact_form textarea {
+  resize: vertical; /* Chỉ cho kéo thay đổi chiều cao */
+}
+
+/* Nút gửi */
+.contact_form button {
+  padding: 15px;
+  border: none;
+
+  background-color: #5a8136;
+  color: white;
+
+  font-family: "Oswald", sans-serif;
+  font-size: 18px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact_form button:hover {
+  background-color: #456329;
+}
+
+/* NÚT MENU */
+
+/* Ẩn ô checkbox */
+#btn_menu {
+  display: none;
+}
+
+/* Mặc định: ẩn menu */
+.nav {
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 250px;
+  height: 100vh;
+  padding-top: 80px;
+  box-sizing: border-box;
+
+  background-color: #f1f5f8;
+  z-index: 999;
+}
+
+.nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav a {
+  display: block;
+  padding: 8px 20px;
+  margin-left: 20px;
+
+  border-left: 3px solid transparent;
+  color: #222;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 30px;
+  font-weight: 400;
+
+  transition: all 0.3s;
+}
+
+.nav a:hover {
+  color: #5a8136;
+  padding-left: 30px;
+  border-left-color: #5a8136;
+}
+
+/* Khi checkbox được chọn: hiện menu */
+#btn_menu:checked ~ .nav {
+  transform: translateX(0);
+}
+
+/* Nút bấm menu */
+.btn_menu {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+
+  padding: 8px 12px;
+  background-color: #f1f5f8;
+  color: #222;
+  border-radius: 4px;
+  font-size: 28px;
+
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* Ban đầu: hiện ☰, ẩn × */
+.open_btn {
+  display: inline;
+}
+
+.close_btn {
+  display: none;
+}
+
+/* Khi checkbox được chọn: ẩn ☰ */
+#btn_menu:checked ~ .btn_menu .open_btn {
+  display: none;
+}
+
+/* Khi checkbox được chọn: hiện × */
+#btn_menu:checked ~ .btn_menu .close_btn {
+  display: inline;
+}
+
+/* FOOTER 8.1 */
+/* FOOTER */
+.footer {
+  background-color: #3b423a; /* Màu nền xám xanh đen giống hình */
+  text-align: center;
+  padding: 40px 20px;
+}
+
+/* Các biểu tượng mạng xã hội */
+.footer_icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.footer_icons a {
+  color: #ffffff;
+  font-size: 32px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer_icons a:hover {
+  color: #5a8136; /* Di chuột đổi sang màu xanh lá thương hiệu */
+}
+
+/* Dòng chữ bản quyền */
+.footer p {
+  color: #ffffff;
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin: 0;
+  line-height: 1.8;
+}
+
+/* Các chữ nổi bật màu xanh lá */
+.footer span {
+  color: #5a8136;
+  font-weight: bold;
+}

@@ -1,0 +1,15 @@
+/* GOOGLE MAP 8.1 */
+.map-container {
+  max-width: 1100px; /* Giới hạn chiều rộng bằng các section khác */
+  margin: 40px auto 60px; /* Căn giữa trang, tạo khoảng cách trên và dưới */
+  padding: 0 20px; /* Đệm 2 bên khi co màn hình */
+}
+
+.map-container iframe {
+  display: block;
+  width: 100%;
+  height: 350px; /* Chiều cao ngang dẹt vừa vặn giống ảnh mẫu */
+  border: 6px solid #5a8136; /* Viền xanh lá thương hiệu Tea Station */
+  border-radius: 30px; /* Bo cong 4 góc tròn giống hình */
+  box-sizing: border-box;
+}
